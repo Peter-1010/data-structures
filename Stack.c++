@@ -2,18 +2,19 @@
 
 using namespace std;
 
-  const int MAX_SIZE = 100;
+const int MAX_SIZE = 100;
+template <class t>
 
 class stack
 {
   int top;
-  int item[MAX_SIZE];
+  t item[MAX_SIZE];
 
 public:
 
   stack():top (-1) {}
 
-  void push (int Element)
+  void push (t Element)
   {
     if (top >= MAX_SIZE - 1) {
       cout << "Stack full on push";
@@ -37,7 +38,7 @@ public:
     }
   }
 
-  void pop(int&Element)
+  void pop(t&Element)
   {
     if (isEmpty())
     {
@@ -48,7 +49,7 @@ public:
     }
   }
 
-  void getTop(int&stackTop)
+  void getTop(t&stackTop)
   {
     if (isEmpty())
     {
@@ -72,7 +73,7 @@ public:
 
 int main() {
 
-  stack s;
+  stack<int>s;
 
   s.push(100);
   s.push(200);
