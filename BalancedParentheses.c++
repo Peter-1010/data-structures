@@ -23,7 +23,7 @@ bool isBalanced(string exp)
         if (exp[i] == '[' || exp[i] == '(' || exp[i] == '{')
         {
             s.push(exp[i]);
-        } else if(exp[i] == '[' || exp[i] == '(' || exp[i] == '{')
+        } else if(exp[i] == ']' || exp[i] == ')' || exp[i] == '}')
         {
             if (s.empty() || !arePair(s.top(), exp[i]))
                 return false;
